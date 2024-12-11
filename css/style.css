@@ -1,0 +1,205 @@
+
+*{
+    font-family: "Ubuntu", sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #002884;
+    box-sizing: border-box;
+}
+body{
+    height:100vh;
+    display: inline;
+}
+
+header {
+    background: #7eff51;
+    text-align: center;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+}
+
+section {
+    border: solid 3px #002884;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 60%;
+    margin: 15px auto;
+    background: #f6fffd;
+    box-shadow: 2px 4px 10px 0px #bbc8d3;
+}
+
+section h2 {
+    text-align: center;
+}
+form input, form button{
+    height: 30px;
+    padding: 0 10px;
+    border: solid 2px #002884;
+    border-radius:5px;
+}
+#bookForm input, #bookForm button, .edited input {
+    width: -webkit-fill-available;
+    margin: 10px 0;
+}
+
+form {
+    width: 90%;
+    padding: 10px;
+    margin: 10px auto;
+}
+form *{
+    font-size: 14pt;
+}
+input#bookFormIsComplete {
+    width: auto;
+    margin: 10px;
+    height: auto;
+}
+
+form button {
+    height: fit-content;!i;!;
+    border: none !important;!i;!;
+    background: #7eff51;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+form button:hover{
+    background: #51ffd7;
+}
+form button span{
+    font-weight: bold;
+}
+
+#searchBook {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+#searchBookTitle{
+    width: 70%;
+}
+#searchSubmit{
+    width: 20%;
+}
+.search-dialog {
+    margin: auto;
+    width: 60%;
+    font-size: 18px;
+    display:  flex;
+    justify-content: space-between;
+}
+.book-list h2{
+    text-align: left;
+}
+
+[data-bookid] {
+    border: solid #e8dcdc 1px;
+    border-radius: 10px;
+    padding: 20px 20px 10px;
+    margin: 20px auto;
+    background: white;
+    box-shadow: 2px 4px 10px 0px #bbc8d3;
+}
+
+[data-bookid] *{
+    margin: 0 0 10px 0;
+    color: #353535;
+}
+
+[data-bookid] h3{
+    font-size: 18pt;
+    text-decoration: underline;
+}
+
+[data-bookid] button{
+    width: fit-content;
+    padding: 10px;
+    margin: 0 10px 10px 0;
+    color: white;
+    border: none;
+}
+button[data-testid="bookItemIsCompleteButton"]{
+    background: #2f970b;
+}
+button[data-testid="bookItemDeleteButton"]{
+    background: #970b0b;
+}
+button[data-testid="bookItemEditButton"]{
+    background: #0b3497;
+}
+
+[data-bookid] button:hover{
+    filter: invert(100%);
+}
+
+.edited{
+    box-shadow: inset 2px 1px 10px 0px #bbc8d3;
+    border: solid 2px;
+}
+
+.edited form{
+    width : 100%;
+}
+
+.edited h3, 
+.edited p,
+.edited-btn button[data-testid="bookItemIsCompleteButton"],
+.edited-btn button[data-testid="bookItemDeleteButton"]
+{
+    display: none;
+}
+.cancle-btn{
+    background: #c4c4c4;
+    color:#353535 !important;
+}
+.edited form *{
+    color: #002884;
+}
+
+@media (max-width: 600px) {
+   #searchBook{
+       flex-wrap: wrap;
+   }
+    #searchSubmit {
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) { 
+    section{
+        width:70%;
+    }
+}
+
+@media (max-width: 650px) { 
+    section{
+        width:90%;
+    }
+}
+
+@media (max-width: 465px) {
+    #searchBookTitle {
+        width: 100%;
+    }
+}
+@media (max-width: 300px) {
+    h1, h2, h3{        
+        font-size: 14pt !important;
+    }
+    div, b, p, form *{
+        font-size: 12pt !important;
+    }
+   section{
+       padding: 10px;
+   }
+   form {
+    width: 100%;
+    padding: 0;
+    margin: 10px auto;
+    }
+    [data-bookid] button{
+    width: 100%;
+}
+}
